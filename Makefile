@@ -24,3 +24,28 @@ build-frontend:
 test-frontend:
 	@echo "Running frontend tests..."
 	cd $(FRONTEND_DIR) && npm test
+
+
+# Backend variables
+BACKEND_DIR := backend
+POETRY := poetry
+
+.PHONY: install-backend
+install-backend:
+	@echo "Installing backend dependencies..."
+	cd $(BACKEND_DIR) && $(POETRY) install
+
+.PHONY: run-backend
+run-backend:
+	@echo "Running backend server..."
+	cd $(BACKEND_DIR) && $(POETRY) run python manage.py runserver
+
+.PHONY: migrate
+migrate:
+	@echo "Applying database migrations..."
+	cd $(BACKEND_DIR) && $(POETRY) run python manage.py migrate
+
+.PHONY: makemigrations
+makemigrations:
+	@echo "Making database migrations..."
+	cd $(BACKEND_DIR) && $(POETRY) run python manage.py makemigrations

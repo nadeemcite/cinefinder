@@ -5,10 +5,7 @@ npm-debug.log
 yarn-error.log
 
 # React-specific
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env
 
 # TypeScript cache
 *.tsbuildinfo
@@ -40,10 +37,6 @@ ENV/
 
 # PostgreSQL data directory
 postgres_data/
-
-# Docker
-## Docker Compose ##
-docker-compose*.yml
 
 ## Docker ##
 Dockerfile
