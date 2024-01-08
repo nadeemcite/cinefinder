@@ -1,0 +1,55 @@
+# Node (React frontend)
+node_modules/
+build/
+npm-debug.log
+yarn-error.log
+
+# React-specific
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# TypeScript cache
+*.tsbuildinfo
+
+# TailwindCSS
+tailwind.output.css
+
+# Python (Django backend)
+## Django ##
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+db.sqlite3
+/db.sqlite3-journal
+
+## Poetry ##
+.poetry-env/
+pyproject.toml
+poetry.lock
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PostgreSQL data directory
+postgres_data/
+
+# Docker
+## Docker Compose ##
+docker-compose*.yml
+
+## Docker ##
+Dockerfile
+.dockerignore
+/.docker/
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
